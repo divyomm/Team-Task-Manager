@@ -1,45 +1,41 @@
 # Team Task Manager
 
-A full-stack web application built for project and task management. It allows users to create projects, assign tasks, and track their status with role-based access control.
+A full-stack web application for managing projects, assigning tasks, and tracking progress. 
 
 ## Tech Stack
-- Frontend: React.js, React Router
-- Backend: Node.js, Express.js
-- Database: MongoDB (via Mongoose)
-- Auth: JWT & bcrypt
+- **Frontend:** React.js, HTML, CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Auth:** JWT (JSON Web Tokens)
 
 ## Features
-- **Roles**: Admin and Member access.
-- **Projects**: Admins can create and manage new projects.
-- **Tasks**: Admins can assign tasks. Members can update their task status (Todo, In Progress, Done).
-- **Dashboard**: Track tasks and automatically highlights overdue items.
+- User Authentication (Login/Signup)
+- Role-based access (Admin vs Member)
+- Admins can create projects and assign tasks to members
+- Members can update their task status (Todo -> In Progress -> Done)
+- Dashboard showing all assigned tasks
 
-## How to Run Locally
+## Setup Instructions
 
-### Backend Setup
-1. Open terminal and navigate to `backend/`:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the server (runs on port 5000):
-   ```bash
-   node server.js
-   ```
+### 1. Start the Backend
+```bash
+cd backend
+npm install
+node server.js
+```
 
-### Frontend Setup
-1. Open a new terminal and navigate to `frontend/`:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the React app (runs on port 3000):
-   ```bash
-   npm start
-   ```
+### 2. Start the Frontend
+Open a new terminal window:
+```bash
+cd frontend
+npm install
+npm start
+```
+
+## Environment Variables
+Create a `.env` file in the backend folder (if running locally):
+```
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
