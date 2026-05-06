@@ -1,0 +1,242 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #425568 0%, #285d68 100%);
+  --card-bg: #1c1d21;
+  --card-hover: #23252a;
+  --text-main: #ffffff;
+  --text-muted: #9eaab7;
+  --accent-orange: #e25b19;
+  --accent-cyan: #72d8e9;
+  --border-color: #2e3238;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* Navbar */
+.custom-navbar {
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-center {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: white;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.small-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #121212;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Layout */
+.page-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #121212;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.avatar-text {
+  background: linear-gradient(45deg, #72d8e9, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  padding-right: 4px;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.profile-info p {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Sections */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.section-link {
+  color: var(--accent-orange);
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Cards */
+.outlier-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 40px;
+  border: 1px solid transparent;
+  transition: background 0.2s;
+}
+
+.outlier-card:hover {
+  background: var(--card-hover);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.card-icon {
+  width: 32px;
+  height: 32px;
+  background: #2e3238;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-title::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #0066ff;
+  border-radius: 50%;
+}
+
+.card-title.overdue::before {
+  background: #ff4c4c;
+}
+
+.card-body {
+  padding-left: 44px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Forms */
+.custom-input {
+  background: #121212;
+  border: 1px solid var(--border-color);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.custom-input:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+}
+
+/* Fix for date picker calendar icon in dark mode */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+select.custom-input {
+  appearance: none;
+}
+
+.btn-primary {
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
